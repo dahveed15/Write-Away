@@ -1,5 +1,47 @@
 {
   "name": "write-away",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.10.2"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -w",
+    "postinstall": "webpack -p"
+  },
+  "engines": {
+    "npm": "3.10.10",
+    "node": "6.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dahveed15/Write-Away.git"
+  },
+  "keywords": [],
+  "author": "David Harris & Rewel Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dahveed15/Write-Away/issues"
+  },
+  "homepage": "https://github.com/dahveed15/Write-Away#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.0.1"
+  }
 }
