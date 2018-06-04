@@ -21,7 +21,7 @@ class Login extends React.Component {
     e.preventDefault();
     // execute some action
     const user = this.state;
-    this.props.processForm({user});
+    
   }
 
   render(){
