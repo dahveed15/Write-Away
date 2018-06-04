@@ -12,13 +12,15 @@ import {
 // import HomepageContainer from './homepage/homepage_container';
 // import Footer from './nav/footer';
 import LoginContainer from './session/login_form_container';
-// import LoginContainer from './login/login_container';
+import SignupContainer from './session/signup_form_container';
 
 const App = (store) => {
   return (
     <div className="container">
-      <Route path="/" component={LoginContainer} />
-      <h1>Hi There</h1>
+      <Switch>
+        <Route path="/login" component={LoginContainer} />
+        <Route path="/signup" component={SignupContainer} />
+      </Switch>
     </div>
   );
 };
