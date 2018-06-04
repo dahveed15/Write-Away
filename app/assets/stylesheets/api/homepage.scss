@@ -1,0 +1,139 @@
+.homepage-container {
+  color: #FFFFFF;
+  background: #2e4890;
+  height: 100%;
+}
+
+.main-links {
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.main-links:hover {
+  color: #D2D2D2;
+}
+
+.nav-container {
+  border-bottom: 2px solid #283861;
+  // background-color: #2a284f;
+  background-color: #2e4890;
+  color: #FFFFFF;
+}
+
+.nav {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  font-size: 18px;
+}
+
+.nav h3 {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  padding: 16px 0px;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-animation-container {
+  width: 100%;
+  padding: 180px 0px 0px 0px;
+}
+
+.main-animation-container h1 {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  top: 180px;
+  visibility: hidden;
+}
+
+.main-animation-container h2 {
+  visibility: hidden;
+  padding-top: 45px;
+}
+
+.session-buttons-container {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  justify-content: center;
+  margin: 60px;
+}
+
+.session-buttons-container a {
+  color: #FFFFFF;
+  transition: all 0.2s ease;
+}
+
+.session-buttons-container a:hover {
+  color: #D2D2D2;
+  border: 2px solid #D2D2D2;
+}
+
+.session-buttons {
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 15px 0px;
+  width: 120px;
+}
+
+.footer-container {
+  // height: 100%;
+  margin-top: 120px;
+  // border-top: 1px solid #FFFFFF;
+  // background-color: #283861;
+  // background-color: #8E94A6;
+  background-color: #5c6375;
+  text-align: center;
+}
+
+.footer {
+  margin: 0 auto;
+  width: 80%;
+  padding: 40px 0px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#write-less {
+  visibility: visible;
+  animation-delay: 0.35s;
+  color: #B3B3B3;
+}
+
+#remember-more {
+  animation-delay: 0.7s;
+  color: #B3B3B3;
+}
+
+#write-away {
+  animation-delay: 1.05s;
+}
+
+#journaling {
+  animation-delay: 0.8s;
+}
+
+#journaling.animated.pulse {
+  animation-delay: 0.02s;
+}
+
+.animated {
+  visibility: visible !important;
+}

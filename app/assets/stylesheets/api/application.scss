@@ -1,0 +1,39 @@
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.icons {
+  width: 12px;
+}
+
+.post-icons {
+  height: 24px;
+}
+
+.post-buttons {
+  background-color: transparent;
+  border: 1px solid transparent;
+  width: 45px;
+  height: 100%;
+  // transition: all 0.2s ease;
+}
+
+.post-buttons:hover {
+  border: 1px solid #223569;
+  background-color: #223569;
+}
