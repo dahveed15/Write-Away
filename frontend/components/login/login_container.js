@@ -27,8 +27,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onSubmit: (email, username, password) => {
-    dispatch(login(email, username, password));
+  onSubmit: (email, password) => {
+    dispatch(login(email, password));
   }
 });
 

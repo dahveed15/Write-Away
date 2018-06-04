@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert, Button, Jumbotron,  Form } from 'reactstrap';
 import TextInput from './text_input';
-import DjangoCSRFToken from './djangoToken';
+// import DjangoCSRFToken from './djangoToken';
 // import Cookies from 'js-cookie';
 
 class LoginForm extends React.Component {
@@ -9,7 +9,6 @@ class LoginForm extends React.Component {
     super(props);
     this.state = {
       email: '',
-      username: '',
       password: ''
     };
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -23,7 +22,7 @@ class LoginForm extends React.Component {
     if (name === "email"){
       this.setState({
         [name]: value,
-        "username": value
+        "email": value
       });
     } else {
       this.setState({
