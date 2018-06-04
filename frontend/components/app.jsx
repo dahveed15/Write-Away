@@ -11,13 +11,13 @@ import {
 // import NavBarContainer from './nav/nav_bar_container';
 // import HomepageContainer from './homepage/homepage_container';
 // import Footer from './nav/footer';
-// // import LoginContainer from './session/form_container';
+import LoginContainer from './session/login_form_container';
 // import LoginContainer from './login/login_container';
 
-// <Route path="/" component={LoginContainer} />
 const App = (store) => {
   return (
     <div className="container">
+      <Route path="/" component={LoginContainer} />
       <h1>Hi There</h1>
     </div>
   );
