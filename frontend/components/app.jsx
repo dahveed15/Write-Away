@@ -18,8 +18,7 @@ const App = (store) => {
   return (
     <div className="container">
       <Switch>
-        <Route path="/login" component={LoginContainer} />
-        <Route path="/signup" component={SignupContainer} />
+        <Route path="/" component={SignupContainer} />
       </Switch>
     </div>
   );
