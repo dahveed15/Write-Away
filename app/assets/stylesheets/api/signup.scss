@@ -12,5 +12,14 @@
 
 .signup-text {
   font-size: 40px;
+}
 
+.signup-form input[type=text], .signup-form input[type=password] {
+  height: 30px;
+  margin-bottom: 5px;
+  // border-radius: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 13px;
 }
