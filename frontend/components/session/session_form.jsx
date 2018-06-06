@@ -41,32 +41,36 @@ class SessionForm extends React.Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <div className="signup-form-container">
-            <div className="signup-form">
-              Welcome to Write Away!
+            <div>
+              <h1 className="signup-text">Welcome to Write Away!</h1>
             </div>
             <div className="signup-form">
-              Sign Up!
+              <h1 className="signup-text">Sign Up!</h1>
               {this.renderErrors()}
               <div>
                 <br/>
-                <label>Name:
+                <label>
                   <input type="text"
                     value={this.state.name}
                     onChange={this.update('name')}
+                    placeholder="First Name"
+                    autoFocus
                     />
                 </label>
                 <br/>
-                <label>Email:
+                <label>
                   <input type="text"
                     value={this.state.email}
                     onChange={this.update('email')}
+                    placeholder="Email"
                   />
                 </label>
                 <br/>
-                <label>Password:
+                <label>
                   <input type="password"
                     value={this.state.password}
                     onChange={this.update('password')}
+                    placeholder="Password"
                   />
                 </label>
                 <br/>

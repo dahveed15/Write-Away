@@ -1,7 +1,16 @@
+//align "Welcome to Write Away!" and the Sign Up Form side by side
 .signup-form-container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
+//may need to edit later to get rid of fixed pixel movement
 .signup-form {
-  width: 50%;
+  margin-top: 10px;
+}
+
+.signup-text {
+  font-size: 40px;
+
 }
