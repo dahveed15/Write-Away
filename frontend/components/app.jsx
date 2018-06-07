@@ -8,7 +8,7 @@ import {
   HashRouter,
   Refresh
 } from 'react-router-dom';
-// import NavBarContainer from './nav/nav_bar_container';
+import NavBarContainer from './new_nav/nav_bar_container';
 // import HomepageContainer from './homepage/homepage_container';
 // import Footer from './nav/footer';
 import LoginContainer from './session/login_form_container';
@@ -17,6 +17,8 @@ import SignupContainer from './session/signup_form_container';
 const App = (store) => {
   return (
     <div className="container">
+
+      <Route path="/" component={NavBarContainer} />
       <Switch>
         <Route path="/login" component={LoginContainer} />
         <Route path="/signup" component={SignupContainer} />
