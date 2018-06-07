@@ -1,0 +1,60 @@
+.nav-container {
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid darkgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.nav-container h1 {
+  // font-family: "Indie Flower";
+  // font-family: "Patrick Hand SC";
+  // font-family: "Kalam";
+  font-family: "Caveat Brush";
+  // font-family: "Condiment";
+  font-size: 3.5em;
+  color: #6087ac;
+  margin-top: 10px;
+  text-shadow: -1px -1px lightgray;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.logo {
+  // margin-top: 10px;
+  // margin-bottom: auto;
+  margin-left: 15px;
+  height: 80px;
+}
+
+.login-button {
+  height: 80px;
+  width: 100px;
+  border-left: 1px solid darkgray;
+  color: #6087ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Caveat Brush";
+  font-size: 1.5em;
+
+}
+
+.login-button:hover {
+  color: #476581;
+}
+
+.Modal {
+  position: absolute;
+  top: 81px;
+  right: 0;
+  height: 200px;
+  width: 300px;
+  border: 1px solid darkgray;
+  border-top: 0;
+  background-color: white;
+  border-bottom-left-radius: 5px;
+}
