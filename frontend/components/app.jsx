@@ -13,6 +13,7 @@ import NavBarContainer from './new_nav/nav_bar_container';
 // import Footer from './nav/footer';
 import LoginContainer from './session/login_form_container';
 import SignupContainer from './session/signup_form_container';
+import Profile from './profile/profile_container';
 
 const App = (store) => {
   return (
@@ -20,7 +21,8 @@ const App = (store) => {
 
       <Route path="/" component={NavBarContainer} />
       <Switch>
-        <Route path="/" component={SignupContainer} />
+        <Route exact path="/" component={SignupContainer} />
+        <Route exact path="/profile" component={Profile} />
       </Switch>
     </div>
   );
