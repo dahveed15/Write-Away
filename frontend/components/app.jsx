@@ -22,7 +22,7 @@ const App = (store) => {
       <Route path="/" component={NavBarContainer} />
       <Switch>
         <Route exact path="/" component={SignupContainer} />
-        <Route exact path="/profile" component={Profile} />
+        <ProtectedRoute exact path="/profile" component={Profile} />
       </Switch>
     </div>
   );
