@@ -3,9 +3,8 @@ import { connect } from 'react-redux';
 import Profile from './profile';
 
 const mapStateToProps = (state, ownProps) => {
-
   return {
-    currentUser: state.entities.users[state.session.id].name
+    currentUser: state.session.currentUser.name
   };
 };
 

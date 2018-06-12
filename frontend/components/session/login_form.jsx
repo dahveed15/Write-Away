@@ -9,22 +9,34 @@ class SessionForm extends React.Component {
       password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.update = this.update.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location !== this.props.location) {
+      this.props.clearErrors();
+    }
+
+    this.setState({ email: '', password: '' });
   }
 
   update(field) {
     return e => this.setState({
-      [field]: e.currentTarget.value
+      [field]: e.currentTarget.value,
     });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(() => {
+        window.location.reload(); //fix this later
+    });
   }
 
   renderErrors() {
-    return(
+    return (
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>

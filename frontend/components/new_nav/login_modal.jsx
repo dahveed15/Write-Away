@@ -4,14 +4,19 @@ import ReactModal from 'react-modal';
 import LoginForm from '../session/login_form_container';
 
 class Login extends React.Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
     this.state = {
       showModal: false,
     };
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
+    // this.logout = this.logout.bind(this);
   }
+
+  // logout(){
+  //
+  // }
 
   handleOpenModal () {
     this.setState({ showModal: true });
@@ -22,7 +27,8 @@ class Login extends React.Component {
   }
 
   render () {
-    return (
+    if (!this.props.loggedIn) {
+      return (
       <div>
         <div
           className="login-button"
@@ -39,6 +45,18 @@ class Login extends React.Component {
         </ReactModal>
       </div>
     );
+  } else {
+    return(
+      <div>
+        <div
+          className="login-button"
+          onClick={() => this.props.logout()}
+        >LOG OUT</div>
+
+      </div>
+    )
+  }
+
   }
 }
 

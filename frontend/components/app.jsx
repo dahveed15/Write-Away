@@ -21,14 +21,16 @@ const App = (store) => {
 
       <Route path="/" component={NavBarContainer} />
       <Switch>
-        <Route exact path="/" component={SignupContainer} />
+        <AuthRoute exact path="/" component={SignupContainer} />
         <ProtectedRoute exact path="/profile" component={Profile} />
+        <ProtectedRoute exact path="/dashboard" component={<h1>HII</h1>} />
       </Switch>
     </div>
   );
 };
 export default App;
 
+// <Route exact path="/" component={SignupContainer} />
 
 // <Route path="/" component={NavBarContainer} />
 // <Switch>

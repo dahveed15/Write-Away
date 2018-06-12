@@ -7,14 +7,14 @@ class SessionForm extends React.Component {
     this.state = {
       name: '',
       email: '',
-      password: ''
+      password: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
     return e => this.setState({
-      [field]: e.currentTarget.value
+      [field]: e.currentTarget.value,
     });
   }
 
@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return(
+    return (
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
