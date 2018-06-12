@@ -14,6 +14,7 @@ class Profile extends React.Component {
     return (
       <div>
         <p>Hello {user}! Welcome to Write Away!</p>
+        
       </div>
     );
 

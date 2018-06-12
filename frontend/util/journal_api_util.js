@@ -1,4 +1,4 @@
-export const fetchjournals = () => {
+export const fetchJournals = () => {
   return $.ajax({
     method: 'GET',
     url: 'api/journals',
