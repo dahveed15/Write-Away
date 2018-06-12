@@ -13,6 +13,7 @@ import NavBarContainer from './new_nav/nav_bar_container';
 // import Footer from './nav/footer';
 import LoginContainer from './session/login_form_container';
 import SignupContainer from './session/signup_form_container';
+import JournalContainer from './journal/journal_index_container';
 import Profile from './profile/profile_container';
 
 const App = (store) => {
@@ -20,10 +21,10 @@ const App = (store) => {
     <div className="container">
 
       <Route path="/" component={NavBarContainer} />
+      <ProtectedRoute exact path="/profile" component={Profile} />
       <Switch>
         <AuthRoute exact path="/" component={SignupContainer} />
-        <ProtectedRoute exact path="/profile" component={Profile} />
-        <ProtectedRoute exact path="/dashboard" component={<h1>HII</h1>} />
+        <ProtectedRoute exact path="/profile" component={JournalContainer} />
       </Switch>
     </div>
   );
