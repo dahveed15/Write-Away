@@ -19,9 +19,20 @@ class SessionForm extends React.Component {
   }
 
   handleSubmit(e) {
+    console.log('handleSubmit');
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    let journal = { title: 'DailyJournal' };
+    this.props.processForm(user)
+      .then(() => {
+        let journal = { title: 'myDailyJournal', image_url: '' };
+        return this.props.createJournal(journal);
+      }, err => (console.log(err))
+    )
+      .then(() => {
+        console.log('helo there');
+        window.location.reload();
+      });
   }
 
   renderErrors() {
@@ -45,7 +56,7 @@ class SessionForm extends React.Component {
               <h1 className="signup-text">Welcome to Write Away!</h1>
             </div>
             <div className="signup-form">
-              <h1 className="signup-text">Sign Up!</h1>
+              <h1 className="signup-text">Sign Up?!</h1>
               {this.renderErrors()}
               <div>
                 <br/>

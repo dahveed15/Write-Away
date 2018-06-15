@@ -12,11 +12,11 @@ export const fetchJournal = (id) => {
   });
 };
 
-export const createjournal = (journal) => {
+export const createJournal = (journal) => {
   return $.ajax({
     method: 'POST',
     url: 'api/journals',
-    data: {journal},
+    data: { journal },
   });
 };
 
@@ -24,7 +24,7 @@ export const updateJournal = (journal) => {
   return $.ajax({
     method: 'PATCH',
     url: `api/journals/${journal.id}`,
-    data: {journal},
+    data: { journal },
   });
 };
 

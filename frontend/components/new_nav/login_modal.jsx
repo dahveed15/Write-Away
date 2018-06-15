@@ -51,7 +51,7 @@ class Login extends React.Component {
         <div
           className="login-button"
           onClick={() => this.props.logout()}
-        >LOG OUT</div>
+        >LOG OUT?</div>
 
       </div>
     )
