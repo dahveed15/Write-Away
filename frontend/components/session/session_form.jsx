@@ -56,7 +56,7 @@ class SessionForm extends React.Component {
               <h1 className="signup-text">Welcome to Write Away!</h1>
             </div>
             <div className="signup-form">
-              <h1 className="signup-text">Sign Up?!</h1>
+              <h1 className="signup-text">Sign Up!</h1>
               {this.renderErrors()}
               <div>
                 <br/>

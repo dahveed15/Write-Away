@@ -25,6 +25,7 @@ const App = (store) => {
       <Switch>
         <AuthRoute exact path="/" component={SignupContainer} />
         <ProtectedRoute exact path="/profile" component={JournalContainer} />
+        <Redirect to='/' />
       </Switch>
     </div>
   );

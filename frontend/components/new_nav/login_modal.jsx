@@ -1,5 +1,6 @@
 import React from 'react';
 // import ReactDOM from 'react-dom';
+import { Redirect } from 'react-router-dom';
 import ReactModal from 'react-modal';
 import LoginForm from '../session/login_form_container';
 
@@ -11,12 +12,7 @@ class Login extends React.Component {
     };
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
-    // this.logout = this.logout.bind(this);
   }
-
-  // logout(){
-  //
-  // }
 
   handleOpenModal () {
     this.setState({ showModal: true });
@@ -51,8 +47,7 @@ class Login extends React.Component {
         <div
           className="login-button"
           onClick={() => this.props.logout()}
-        >LOG OUT?</div>
-
+        >LOG OUT</div>
       </div>
     )
   }
@@ -62,6 +57,4 @@ class Login extends React.Component {
 
 const props = {};
 
-
 export default Login;
-// ReactDOM.render(<Login {...props} />, document.getElementById('login'))

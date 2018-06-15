@@ -7,23 +7,23 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 const Auth = ({ component: Component, path, loggedIn }) => {
   return (
     <Route path={path} render={(props) => {
-      if (!loggedIn) {
-        return (<Component {...props} />);
-      } else {
+      if (loggedIn) {
         return (<Redirect to="/profile" />);
+      } else {
+        return (<Component {...props} />);
       }
     }} />
   );
 };
 
 const Protected = ({ component: Component, path, loggedIn }) => {
-  return (<Route path={path} render={(props) => (
-       loggedIn ? (
-        <Component {...props} />
-      ) : (
-        <Redirect to="/" />
-      )
-    )} />
+  return (<Route path={path} render={(props) => {
+      if (loggedIn) {
+        return (<Component {...props} />);
+      } else {
+        return (<Redirect to="/" />);
+      }
+    }} />
   );
 };
 
