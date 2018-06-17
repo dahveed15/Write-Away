@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180612171915) do
+ActiveRecord::Schema.define(version: 20180615190450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "entries", force: :cascade do |t|
+    t.integer "journal_id", null: false
+    t.string "title"
+    t.string "body", null: false
+    t.date "date", null: false
+    t.string "image_url"
+    t.string "video_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["journal_id"], name: "index_entries_on_journal_id"
+  end
 
   create_table "journals", force: :cascade do |t|
     t.string "title", null: false

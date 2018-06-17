@@ -14,6 +14,7 @@ import NavBarContainer from './new_nav/nav_bar_container';
 import LoginContainer from './session/login_form_container';
 import SignupContainer from './session/signup_form_container';
 import JournalContainer from './journal/journal_index_container';
+import JournalShowContainer from './journal/journal_show_container';
 import Profile from './profile/profile_container';
 
 const App = (store) => {
@@ -25,6 +26,8 @@ const App = (store) => {
       <Switch>
         <AuthRoute exact path="/" component={SignupContainer} />
         <ProtectedRoute exact path="/profile" component={JournalContainer} />
+        <ProtectedRoute exact path="/profile" component={JournalContainer} />
+        <ProtectedRoute path='/journal/:journalId/entries' component={JournalShowContainer} />
         <Redirect to='/' />
       </Switch>
     </div>

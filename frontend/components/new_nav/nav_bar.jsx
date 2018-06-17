@@ -12,7 +12,7 @@ class NavBar extends React.Component {
     return (
       <nav className="nav-container">
         <img className="logo" src="assets/WriteAway.svg"></img>
-        <h1>WRITE AWAY</h1>
+        <h1>write away</h1>
         <Login logout={this.props.logout} loggedIn={this.props.loggedIn}/>
       </nav>
     );

@@ -1,6 +1,7 @@
 class Journal < ApplicationRecord
-  validates :title, :user_id, presence: true
+  validates :journal_id, :date, :body, presence: true
 
   belongs_to :user
+  has_many :entries
 
 end

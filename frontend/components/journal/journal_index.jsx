@@ -19,7 +19,7 @@ class JournalIndex extends React.Component {
         <ul className="journal-list">
           {this.props.journals.map((journal, idx) =>
             <div className="journal-titles" key={idx}>
-              <Link className="gotojournal" to={`journals/${journal.id}`}>Go To My Journal</Link>
+              <Link className="gotojournal" to={`journal/${journal.id}/entries`}>Go To My Journal</Link>
             </div>)}
         </ul>
       </div>

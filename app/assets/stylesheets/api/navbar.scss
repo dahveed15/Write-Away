@@ -1,23 +1,25 @@
 .nav-container {
-  height: 80px;
-  background: white;
-  border-bottom: 1px solid darkgray;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08)
 
 }
 
 .nav-container h1 {
-  // font-family: "Indie Flower";
-  // font-family: "Patrick Hand SC";
-  // font-family: "Kalam";
-  font-family: "Caveat Brush";
-  // font-family: "Condiment";
+  display: flex;
+  align-items: flex-end;
+  // font-family: "Indie Flower", cursive;
+  // font-family: "Playball";
+  font-family: "Special Elite", cursive;
   font-size: 3.5em;
-  color: #6087ac;
-  margin-top: 10px;
-  text-shadow: -1px -1px lightgray;
+  // color: #6087ac;
+  color: #365166;
+  text-shadow: 1px 2px 5px #6087ac;//lightgray;
+  text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 5px;
 }
@@ -32,13 +34,13 @@
 .login-button {
   height: 80px;
   width: 100px;
-  border-left: 1px solid darkgray;
-  color: #6087ac;
+  border-left: 1px solid lightgray;
+  color: #677481;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-family: "Caveat Brush";
+  font-family: 'Shadows Into Light', cursive;
   font-size: 1.5em;
 
 }
