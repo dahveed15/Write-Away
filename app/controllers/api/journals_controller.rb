@@ -1,9 +1,9 @@
+require 'byebug'
 class Api::JournalsController < ApplicationController
   before_action :require_logged_in
 
   def create #Check that its saving
     @journal = Journal.new(journal_params)
-
     @journal.user_id = current_user.id
     if @journal.save
       render :show

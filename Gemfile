@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'figaro'
 
+gem 'twilio-ruby'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

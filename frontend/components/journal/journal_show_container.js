@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
 import JournalShow from './journal_show';
-// import { fetchEntries } from '../../actions/entry_actions';
+import { fetchEntries } from '../../actions/entry_actions';
 
 const mapStateToProps = (state) => {
   return {
-    journals: Object.values(state.entities.journals)
+    entries: Object.values(state.entities.entries),
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchEntries: () => dispatch(fetchJournals()),
+    fetchEntries: () => dispatch(fetchEntries()),
     deleteEntry: (id) => dispatch(deleteJournal(id))
   };
 };
 
-export default connect(null, null)(JournalShow);
+export default connect(mapStateToProps, mapDispatchToProps)(JournalShow);

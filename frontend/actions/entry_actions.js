@@ -1,43 +1,43 @@
-import * as JournalApiUtil from '../util/journal_api_util';
+import * as EntryApiUtil from '../util/entry_api_util';
 
 export const RECEIVE_ALL_ENTRIES = 'RECEIVE_ALL_ENTRIES';
 export const RECEIVE_ENTRY = 'RECEIVE_ENTRY';
 export const REMOVE_ENTRY = 'REMOVE_ENTRY';
 
 
-const receiveAllJournals = journals => {
+const receiveAllEntries = entries => {
   return {
-    type: RECEIVE_ALL_JOURNALS,
-    journals
+    type: RECEIVE_ALL_ENTRIES,
+    entries
   };
 };
 
-const receiveJournal = journal => ({
+const receiveEntry = entry => ({
   type: RECEIVE_JOURNAL,
-  journal
+  entry
 });
 
-const removeJournal = journalId => ({
+const removeEntry = entryId => ({
   type: REMOVE_JOURNAL,
-  journalId
+  entryId
 });
 
-export const fetchJournals = () => dispatch => {
-  return JournalApiUtil.fetchJournals().then((journals) => dispatch(receiveAllJournals(journals)));
+export const fetchEntries = () => dispatch => {
+  return EntryApiUtil.fetchEntries().then((entries) => dispatch(receiveAllEntries(entries)));
 };
 
-export const fetchJournal = (id) => dispatch => {
-  return JournalApiUtil.fetchJournal(id).then((journal) => dispatch(receiveJournal(journal)));
+export const fetchEntry = (id) => dispatch => {
+  return EntryApiUtil.fetchEntry(id).then((entry) => dispatch(receiveEntry(entry)));
 };
 
-export const createJournal = (journal) => dispatch => {
-  return JournalApiUtil.createJournal(journal).then((createdJournal) => dispatch(receiveJournal(createdJournal)));
+export const createEntry = (entry) => dispatch => {
+  return EntryApiUtil.createEntry(entry).then((createdEntry) => dispatch(receiveEntry(createdEntry)));
 };
 
-export const updateJournal = (journal) => dispatch => {
-  return JournalApiUtil.updateJournal(journal).then((updatedJournal) => dispatch(receiveJournal(updatedJournal)));
+export const updateEntry = (entry) => dispatch => {
+  return EntryApiUtil.updateEntry(entry).then((updatedEntry) => dispatch(receiveEntry(updatedEntry)));
 };
 
-export const deleteJournal = (journalId) => dispatch => {
-  return JournalApiUtil.deleteJournal(journalId).then(() => dispatch(removeJournal(journalId)));
+export const deleteEntry = (entryId) => dispatch => {
+  return EntryApiUtil.deleteEntry(entryId).then(() => dispatch(removeEntry(entryId)));
 };

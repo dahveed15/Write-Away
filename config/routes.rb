@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  namespace :api do
+    get 'twilio/sms'
+  end
+
   get 'static_pages/root'
 
   root to: 'static_pages#root'
+
 
   namespace :api, defaults: { format: :json } do
     resources :users, only: [:create]

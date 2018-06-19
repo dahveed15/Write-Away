@@ -14,7 +14,7 @@ class Api::EntriesController < ApplicationController
   end
 
   def index
-    @entries = current_user.journals[0].entries
+    @entries = current_user.journal_entries
   end
 
   def update
