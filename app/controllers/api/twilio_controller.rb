@@ -10,10 +10,6 @@ class Api::TwilioController < ApplicationController
 
     user = User.find_by(phone_number: from)
 
-# user c User.find_by(id: 12)
-
-# debugger
-
     return nil if user.nil?
     journal = Journal.find_by(user_id: user.id)
     @entry = Entry.new(body: user_response, journal_id: journal.id, date: Date.today )
