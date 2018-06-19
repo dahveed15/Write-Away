@@ -18,14 +18,13 @@ import JournalShowContainer from './journal/journal_show_container';
 import Profile from './profile/profile_container';
 
 const App = (store) => {
+  // <ProtectedRoute exact path="/profile" component={Profile} />
   return (
     <div className="container">
 
       <Route path="/" component={NavBarContainer} />
-      <ProtectedRoute exact path="/profile" component={Profile} />
       <Switch>
         <AuthRoute exact path="/" component={SignupContainer} />
-        <ProtectedRoute exact path="/profile" component={JournalContainer} />
         <ProtectedRoute exact path="/profile" component={JournalContainer} />
         <ProtectedRoute path='/journal/:journalId/entries' component={JournalShowContainer} />
         <Redirect to='/' />

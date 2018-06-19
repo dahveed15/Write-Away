@@ -12,9 +12,9 @@ class Profile extends React.Component {
     let user = this.props.currentUser ? this.props.currentUser : null;
 
     return (
-      <div>
+      <div className='profile-container'>
         <p>Hello {user}! Welcome to Write Away!</p>
-        
+
       </div>
     );
 

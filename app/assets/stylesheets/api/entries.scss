@@ -1,3 +1,62 @@
 // Place all the styles related to the Api/Entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.journal-entries-outer {
+  display: flex;
+}
+
+.new-entry-outer {
+  position: fixed;
+  margin-top: 7.5vh;
+  height: 92.5vh;
+  width: 25vw;
+  border-right: 1px solid white;
+  box-shadow: 2px 0 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+  background: #eeeeee;
+}
+
+.journal-entries {
+  background: linear-gradient(141deg, #95bcba 0%, #4490a6 51%, #557187 75%);
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 25vw;
+  margin-top: 6.5vh;
+}
+
+.journal-entries h1 {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.entry-list {
+
+}
+
+.journal-entry-item {
+  height: 10vh;
+  width: 50vw;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background: #eeeeee;
+}
+
+.entry-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  height: 2vh;
+}
+
+.entry-title h2 {
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.entry-body {
+
+}
